@@ -29,6 +29,13 @@ echo -n mongopassword | base64
 
 > The use of kubectl commands to manage and inspect Kubernetes resources (like checking pod statuses and accessing logs).
 
+```
+kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yaml
+```
+
 - Advanced Concepts:
 
 > Scaling, networking, and handling persistent storage with Kubernetes.
