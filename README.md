@@ -9,7 +9,9 @@ echo -n mongopassword | base64
 
 ## Introduction to Kubernetes:
 
-### Kubernetes is defined as a container orchestration platform that automates the deployment, scaling, and management of containerized applications. It helps manage containerized applications across a cluster of nodes.
+### Kubernetes is defined as a container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+
+### It helps manage containerized applications across a cluster of nodes.
 
 - Basic Kubernetes Components:
 
