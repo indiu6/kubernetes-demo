@@ -33,13 +33,13 @@ spec:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
                 secretKeyRef: # from the secret yaml
-                  name: mongo-secret
-                  key: mongo-user
+                  name: mongodb-secret
+                  key: mongo-root-user
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret
-                  key: mongo-password
+                  name: mongodb-secret
+                  key: mongo-root-password
           resources:
             requests:
               memory: '64Mi'
