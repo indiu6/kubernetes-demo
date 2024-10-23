@@ -33,20 +33,20 @@ spec:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
                 secretKeyRef: # from the secret yaml
-                  name: mongodb-secret
+                  name: mongo-secret
                   key: mongo-root-user
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mongodb-secret
+                  name: mongo-secret
                   key: mongo-root-password
-          resources:
-            requests:
-              memory: '64Mi'
-              cpu: '250m'
-            limits:
-              memory: '128Mi'
-              cpu: '500m'
+          # resources:
+          #   requests:
+          #     memory: '64Mi'
+          #     cpu: '250m'
+          #   limits:
+          #     memory: '128Mi'
+          #     cpu: '500m'
 ---
 # Service
 
@@ -57,7 +57,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-service # same name in mongo-config, mongo-url
+  name: mongo-service # same name in mongo-config, mongo-url
 spec:
   selector:
     app: mongodb

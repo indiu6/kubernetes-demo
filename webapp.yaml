@@ -51,7 +51,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: mongo-config
-                  key: mongo-url
+                  key: database-url
 ---
 # Service
 
